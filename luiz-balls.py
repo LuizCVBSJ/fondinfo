@@ -8,6 +8,10 @@ class Ball:
         self._w = w
         self._h = h
 
+    def multiple_moves(self, times: int):
+        for i in range(times):
+            self.move()
+
     def move(self):
         if not 0 <= self._x + self._dx <= ARENA_W - BALL_W:
             self._dx = -self._dx
