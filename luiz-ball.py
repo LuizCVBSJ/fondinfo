@@ -19,3 +19,12 @@ class Ball:
 
     def postion(self):
         return self._x, self._y, BALL_W, BALL_H
+
+b1 = Ball(140, 180)
+b2 = Ball(180, 140)
+
+for i in range(25):
+    b1.move()
+    b2.move()
+    print("b1 @", b1.postion())
+    print("b2 @", b2.postion())
