@@ -1,11 +1,11 @@
+from functools import lru_cache
+
+@lru_cache()  
+
 def fibonacci(n: int) -> int:
-    result = 0
     if n <= 1:
-        result = n
-    else:
-        result = fibonacci(n-1) + fibonacci(n-2)
-    return result
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
 
-number = int(input("Fibonacci of ?\n"))
-
+number = int(input(("Choose the number for the Fibonacci sequence: ")))
 print(fibonacci(number))
