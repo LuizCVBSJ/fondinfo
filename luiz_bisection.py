@@ -4,7 +4,9 @@ def f(x: float) -> float:
 def find_zero(a: float, b: float):
     half = (a + b) / 2
     f_half = f(half)
-
+    
+    if f(a) * f(b) > 0:
+        raise ValueError("f Doesn't cross the x-axis")
     if abs(f_half) < 0.001:
         return half
     elif f_half * f(a) < 0:
